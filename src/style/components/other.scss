@@ -1,0 +1,213 @@
+.other{
+    padding-top: 56px;
+    padding-bottom: 112px;
+
+    @include tablet {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    @include mobile {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    
+    &__inner{
+        display: flex;
+        align-items: stretch;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            margin-top: 10px;
+        }
+    }
+    &__item{
+        max-width: 447px;
+        flex-basis: 31.9%;
+        border-top: 5px solid #DD0060;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+        @include tablet {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 1500px) {
+            flex-basis: 31.5%;
+        }
+
+        &:not(:nth-child(3n + 3)){
+            margin-right: 30px;
+
+            @media (max-width: 1200px) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            flex-direction: row;
+            max-width: 100%;
+            min-height: 331px;
+        }
+
+        @media (max-width: 870px) {
+            flex-direction: column;
+        }
+
+        &:not(:first-child) {
+
+            @media (max-width: 1200px) {
+                margin-top: 20px;
+            }
+        }
+        
+        @include mobile {
+            margin-top: 20px;
+        }
+
+        &-price{
+            padding-left: 30px;
+            font-size: 15px;
+            line-height: 135%;
+            font-weight: bold;
+            color: #262C36;
+            flex-shrink: 0;
+
+            @media (max-width: 1200px){
+                flex-shrink: 0;
+                margin-right: 15px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+                line-height: 135%;
+            }
+        }
+
+        &-img {
+            @media (max-width: 1200px) {
+                width: 401px;
+                object-fit: cover;
+                min-height: 339px;
+            }
+
+            @media (max-width: 870px) {
+                width: 100%;
+            }
+
+            @media (max-width: 450px) {
+                min-height: 0;
+                height: 210px;
+            }
+        }
+
+        &-name{
+            padding: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
+
+            @media (max-width: 870px) {
+                display: block;
+            }
+
+            @include mobile {
+                display: block;
+                font-size: 18px;
+                line-height: 21px;
+                padding: 17px 20px 17px;
+            }
+
+            &--tablet {
+                display: none;
+
+                @media (max-width: 1200px) {
+                    display: flex;
+                }
+
+                @media (max-width: 870px) {
+                    display: none;
+                }
+            }
+        }
+        &-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 50px;
+
+            @include tablet {
+                min-height: 40px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+                line-height: 135%;
+            }
+
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+        }
+        &-btn{
+            width: 190px;
+            margin-left: 20px;
+            display: flex;
+            color: #ffffff;
+
+            &:visited {
+                color: #ffffff;
+            }
+
+            &:hover {
+                color: #ffffff;
+            }
+
+            @include mobile {
+                width: 145px;
+            }
+
+            &-content {
+                width: 100%;
+            }
+        }
+    }
+    &__list{
+        padding: 30px 40px 35px 50px;
+
+        @media (max-width: 1200px) {
+            padding: 30px 30px 30px 50px;
+        }
+        &-item{
+            color: #37A58C;
+            &:not(:first-child){
+                margin-top: 15px;
+            }
+            >span{
+                color: #1C1C1C;
+                font-size: 16px;
+                line-height: 19px;
+
+                @include mobile {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+
+        }
+    }
+}

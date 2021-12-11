@@ -1,0 +1,121 @@
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked){
+    
+    position: absolute;
+    left: -9999px;
+}
+
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ffffff;
+    background-color: #FFF;
+}
+input.hero-form__checkbox[type="checkbox"]:checked + label:before,
+input.hero-form__checkbox[type="checkbox"]:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000;
+    background-color: #FFF;
+}
+input.order-popup-form__checkbox[type="checkbox"]:checked + label:before,
+input.order-popup-form__checkbox[type="checkbox"]:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000;
+    background-color: #FFF;
+}
+
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before{
+    border-radius: 2px;
+
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after{
+
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after{
+
+    left: 4px;
+    top: 5px;
+    width: 10px;
+    height: 6px;
+    border-radius: 1px;
+    border-left: 2px solid #dd0060;
+    border-bottom: 2px solid #dd0060;
+    transform: rotate(-45deg);
+}
+
+input.hero-form__checkbox[type="checkbox"]:checked + label:after,
+input.hero-form__checkbox[type="checkbox"]:not(:checked) + label:after{
+
+    top: 15px;
+
+    @include tablet{
+        top: 5px;
+    }
+}
+input.order-popup-form__checkbox[type="checkbox"]:checked + label:after,
+input.order-popup-form__checkbox[type="checkbox"]:not(:checked) + label:after{
+
+    top: 5px;
+
+    @include mobile{
+        top: 13px;
+    }
+}
+input[type="checkbox"]:not(:checked) + label:after{
+
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after{
+
+    opacity: 1;
+}
+.error::before{
+    border: 1px solid rgb(184, 17, 17) !important;
+}
+.complete::before{
+    border: 1px solid green !important;
+}
+.hero__form-form{
+    >.dd.error{
+        border: 1px solid rgb(184, 17, 17);
+    }
+    >.dd.complete{
+        border: 1px solid green;
+    }
+}

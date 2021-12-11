@@ -1,0 +1,103 @@
+.price{
+    padding-top: 112px;
+    padding-bottom: 56px;
+
+    @include tablet {
+        padding-top: 65px;
+        padding-bottom: 33px;
+    }
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    &__inner{
+        display: flex;
+        margin-top: 52px;
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+    &__list{
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        &:first-child{
+            margin-right: 30px;
+
+            .price__item {
+                @include tablet {
+                    &:nth-child(odd){
+                        background: #E5E5E5;
+                    }
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            .price__head {
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            .price__item {
+                @include tablet {
+                    &:nth-child(even){
+                        background: #E5E5E5;
+                    }
+                }
+            }
+        }
+    }
+    &__head{
+        padding: 22px 25px 22px 25px;
+        background: #37A58C;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-title{
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+        }
+        &-price{
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+            >span{
+                @include mobile-450{
+                    display: none;
+                }
+            }
+        }
+    }
+    &__item{
+        padding: 22px 25px 22px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (min-width: 1025px) {
+            &:nth-child(odd){
+                background: #E5E5E5;
+            }
+        }
+        &-name{
+            font-size: 15px;
+            line-height: 135%;
+            color: #262C36;
+        }
+        &-price{
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 135%;
+            color: #262C36;
+            min-width: 51px;
+        }
+    }
+            
+}

@@ -1,0 +1,171 @@
+.footer{
+	padding-top: 28px;
+	padding-bottom: 28px;
+
+	@include mobile {
+		padding: 50px 0;
+	}
+	&__inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include media-1300 {
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+
+	&-nav {
+		margin-left: 0;
+		margin-right: auto;
+
+		@include media-1300 {
+			flex-basis: 100%;
+			order: 1;
+			margin-right: 0;
+		}
+
+		&__list {
+			display: flex;
+			align-items: center;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			@include media-1300 {
+				justify-content: space-between;
+			}
+	
+			@include mobile {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		&__item {
+			font-size: 16px;
+			line-height: 17px;
+			position: relative;
+			transition: 0.4s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -12px;
+				left: 0;
+				height: 1px;
+				background: $secondary;
+				width: 0;
+				transition: 0.4s;
+			}
+
+			&:hover {
+				color: $secondary;
+
+				&::before {
+					width: 80%;
+				}
+
+			}
+
+			&:not(:last-child) {
+				margin-right: 25px;
+
+				@include mobile {
+					margin-right: 0;
+				}
+			}
+
+			&:not(:first-child) {
+				@include mobile {
+					margin-top: 20px;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit;
+
+				&:visited {
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	&__info{
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		margin-left: 20px;
+
+		@include media-1300 {
+			flex-basis: 80%;
+			margin-left: 0;
+			justify-content: space-between;
+		}
+
+		&-copywriting{
+            font-size: 14px;
+            line-height: 17px;
+            color: #C4C4C4;
+            margin-right: 45px;
+
+			@include media-1300 {
+				margin-right: 10px;
+				flex-shrink: 0;
+			}
+
+			@include mobile {
+				margin-right: 0;
+			}
+        }
+        &-link{
+            font-size: 14px;
+            line-height: 17px;
+            color: #1C1C1C;
+            >a{
+                color: $secondary;
+            }
+
+			@include mobile {
+				margin-top: 15px;
+			}
+        }
+
+		@include media-1300 {
+			margin-top: 30px;
+			order: 3;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			margin-top: 15px;
+		}
+	}
+
+	&__logo {
+
+		&-link {
+			flex-shrink: 0;
+			margin-right: 55px;
+
+			@include media-1300 {
+				margin-top: 30px;
+				margin-right: 10px;
+				order: 2;
+				flex-basis: 16%;
+				flex-shrink: 1;
+			}
+
+			@include mobile {
+				margin-top: 25px;
+			}
+		}
+	}
+}

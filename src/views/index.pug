@@ -1,0 +1,28 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	section.hero 
+		include components/hero
+	section.advantage
+		include components/advantage
+	section.works
+		include components/works
+	section.video
+		include components/video
+	section.price
+		include components/price
+	section.other
+		include components/other
+	section.info
+		include components/info
+	.order-popup 
+		include components/popup

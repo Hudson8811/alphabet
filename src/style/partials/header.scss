@@ -1,0 +1,299 @@
+.sh{
+	&-burger {
+		position: relative;
+		display: none;
+		width: 34px;
+		height: 26px;
+		cursor: pointer;
+		transition-duration: .2s;
+		@include media-1400{
+			display: flex;
+		}
+		span,
+		span::before,
+		span::after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 34px;
+			height: 4px;
+			margin-top: -2px;
+			margin-left: -17px;
+			background-color: #1c1c1c;
+			border-radius: 3px;
+		}
+
+		span::before,
+		span::after {
+			content: '';
+			transition: 0.2s;
+		}
+
+		span::before {
+			transform: translateY(-12px);
+		}
+
+		span::after {
+			transform: translateY(12px);
+		}
+
+		&--active {
+
+			span {
+				height: 0;
+
+				&::before {
+					transform: rotate(45deg);
+					background: #1c1c1c;
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+					background: #1c1c1c;
+				}
+			}
+		}
+	}
+}
+
+.header{
+	padding-top: 28px;
+	padding-bottom: 28px;
+	height: 106px;
+
+	@include media-1400{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 101;
+		background: #fff;
+	}
+
+	@include mobile {
+		height: 70px;
+		padding: 13px 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&-mobile {
+		&-overlay {
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100vh;
+			z-index: 100;
+			background-color: rgba(0, 0, 0, 0.7);
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+	
+
+	&__inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+
+		&-link {
+			display: inline-block;
+			flex-shrink: 0;
+			margin-right: 40px;
+		}
+
+		@include mobile {
+			width: 100px;
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		@media (max-width: 1400px) {
+			justify-content: center;
+		}
+
+		@include tablet {
+			position: fixed;
+			top: 106px;
+			right: -110%;
+			bottom: 0;
+			max-width: 400px;
+			padding: 50px;
+			padding-top: 44px;
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			background: #fff;
+			z-index: 100;
+			overflow-y: auto;
+			opacity: 0;
+			transition: all .4s;
+			transition: opacity 0;
+
+			&--active {
+				right: 0;
+				opacity: 1;
+				&::-webkit-scrollbar {
+					width: 4px;
+					background-color: white;
+				}
+				&::-webkit-scrollbar-thumb {
+					background-color: #37a58c;
+					border-radius: 2px;
+				}
+			}
+		}
+
+		@include mobile {
+			top: 70px;
+		}
+
+		@include mobile-450 {
+			padding: 30px;
+		}
+	}
+
+	&-nav {
+
+		@media (max-width: 1400px) {
+			position: fixed;
+			top: 106px;
+			right: -110%;
+			bottom: 0;
+			width: 400px;
+			padding: 50px;
+			padding-top: 44px;
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			background: #fff;
+			z-index: 100;
+			overflow-y: auto;
+			opacity: 0;
+			transition: all .4s;
+			transition: opacity 0;
+
+			&--active {
+				right: 0;
+				opacity: 1;
+			}
+		}
+		
+		@include tablet {
+			position: static;
+			width: auto;
+			padding-top: 0;
+			background: transparent;
+			overflow-y: visible;
+		}
+
+		&__list {
+			list-style: none;
+			display: flex;
+			align-items: center;
+
+			@media (max-width: 1400px)  {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+
+		&__item {
+			font-size: 16px;
+			line-height: 17px;
+			position: relative;
+			transition: 0.4s;
+
+			@media (max-width: 1400px)  {
+				&:not(:last-child) {
+					margin-bottom: 26px;
+				}
+			}
+
+			&::before{
+				content: '';
+				position: absolute;
+				bottom: -12px;
+				left: 0;
+				height: 1px;
+				background: $secondary;
+				width: 0;
+				transition: 0.4s;
+			}
+
+			&:hover{
+				color: $secondary;
+
+				&::before {
+					width: 90%;
+				}
+			}
+			
+			&:not(:last-child){
+				margin-right: 25px;
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit;
+
+				&:visited {
+					color: inherit;
+				}
+			}
+		}
+	}
+	
+	&__contacts{
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+
+		@include tablet{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&-item{
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+
+			>img{
+				margin-right: 10px;
+			}
+
+			&:not(:last-child){
+				margin-right: 25px;
+
+				@include tablet {
+					margin-right: 0;
+					margin-bottom: 25px;
+				}
+			}
+
+			&:last-child{
+				&:hover{
+					color: $primary;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

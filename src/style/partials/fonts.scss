@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Brix Sans";
+    src: url("../fonts/BrixSansBold.woff2") format("woff2"),
+        url("../fonts/BrixSansBold.woff") format("woff"),
+        url("../fonts/BrixSansBold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Brix Sans";
+    src: url("../fonts/BrixSansRegular.woff2") format("woff2"),
+        url("../fonts/BrixSansRegular.woff") format("woff"),
+        url("../fonts/BrixSansRegular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

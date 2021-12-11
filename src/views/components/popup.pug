@@ -1,0 +1,18 @@
+.order-popup__overlay 
+	.order-popup__dialog 
+		h3.title.order-popup__title Оформление заказа
+		button.order-popup__close
+			img(src="img/close.svg" alt="X")
+		form.order-popup-form.order-popup__contacts-form__form.js-form-order-popup
+			.order-popup-form__wrap
+				input.order-popup-form__name.iscomplete(placeholder="Ваше имя",type="text",data-validate-field="name")
+				input.order-popup-form__email.iscomplete(type="text",placeholder="Email",data-validate-field="email")
+				input.order-popup-form__phone.iscomplete(type="phone",placeholder="Телефон",data-validate-field="phone")
+				textarea.order-popup-form__msg.iscomplete(name="msg",placeholder="Сообщение", data-validate-field="text")
+				.order-popup-form__checkbox-wrap
+					input#cb3.order-popup-form__checkbox(type="checkbox", name="cb3", data-validate-field="checkbox")
+					label.order-popup-form__label(for="cb3") Соглашаюсь с 
+						a(href="#") политикой конфиденциальности
+					button.order-popup-form__btn.btn 
+						span.btn__content Заказать
+							img(src="img/btn-arrow.svg", alt="")

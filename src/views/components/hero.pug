@@ -1,0 +1,45 @@
+.hero__slider 
+    <button class="hero-slider__prev"><img src="img/hero/slider-arrow.svg" alt="arrow"></button>
+    .hero__slider
+        .hero-slider__item 
+            img.hero-slider__item-img(src="img/hero/hero-1.jpg", alt="")
+
+    <button class="hero-slider__next"><img src="img/hero/slider-arrow.svg" alt="arrow"></button>
+.container.hero__content
+        .hero__inner
+            .hero__info
+                h1.hero__info-title Занимаемся монтажом труб REHAU вот уже более 5 лет 
+                p.hero__info-text В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг. В нашем портфолио десятки качественных работ и довольных клиентов. В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг.
+                button.hero__info-btn.btn(data-popup="order")
+                    span.btn__content 
+                        | Заказать звонок
+                        img(src="img/btn-arrow.svg", alt="")
+            .hero__form
+                .hero__popup.hero__popup--success
+                    .hero__popup-content
+                        img(src="img/success.svg", alt="").hero__popup-image
+                        h4.hero__popup-title Ваша заявка отправлена
+                .hero__popup.hero__popup--error
+                    .hero__popup-content
+                        img(src="img/error.svg", alt="").hero__popup-image
+                        h4.hero__popup-title Произошла ошибка
+                h3.hero__form-title Оставьте заявку на услугу
+                p.hero__form-subtitle И наш специалист свяжется с вами в самое ближайшее время
+                form.hero__form-form.hero-form.js-form(action="#") 
+                    input.hero-form__name.iscomplete(placeholder="Ваше имя",type="text", data-validate-field="name")
+                    input.hero-form__phone.iscomplete(placeholder="Ваш телефон",type="phone", data-validate-field="phone")
+                    select.hero-form__select(name="dd" id="dd")
+                                option(value="1", disabled, selected, hidden) Какая услуга интересует?
+                                option(value="2") Какая услуга интересует?
+                                option(value="3") Какая услуга интересует?
+                                option(value="4") Какая услуга интересует?
+                    textarea.hero-form__textarea.iscomplete(name="", placeholder="Сообщение", data-validate-field="text")
+                    .hero-form__wrap 
+                        input#cb2.hero-form__checkbox(type="checkbox", name="cb2", data-validate-field="checkbox")
+                        label.hero-form__label(for="cb2") 
+                            | Доверяю свои <br>
+                            a(href="#") персональные данные
+                        button.hero-form__btn.btn
+                            span.btn__content
+                                | Отправить
+                                img(src="img/btn-arrow.svg", alt="")

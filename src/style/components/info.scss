@@ -1,0 +1,448 @@
+.info{
+    padding-top: 112px;
+    padding-bottom: 112px;
+    background: rgba(2, 9, 40, 0.7);
+
+    @include tablet {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: 1300px) {
+            flex-direction: column;
+        }
+    }
+    &__contacts{
+        width: 100%;
+
+        &-info {
+            flex-basis: 48.9%;
+            margin-right: 50px;
+
+            @media (max-width: 1300px) {
+                order: 1;
+                margin-right: 0;
+                flex-basis: 100%;
+            }
+
+            @include mobile {
+                order: 2;
+                margin-top: 50px;
+            }
+        }
+
+        &-form{
+            margin-top: 50px;
+            flex-basis: 48.9%;
+            position: relative;
+
+            @media (max-width: 1300px) {
+                order: 3;
+                flex-basis: 100%;
+            }
+
+            @include tablet {
+                margin-top: 45px;
+            }
+
+            @include mobile {
+                order: 1;
+                margin-top: 0;
+            }
+
+            &__title{
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 36px;
+                color: #FFFFFF;
+
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+
+                @include mobile {
+                    font-size: 24px;
+                    line-height: 26px;
+                }
+            }
+            &__form{
+                margin-top: 35px;
+            }
+        }
+    }
+
+    &-form{
+        &__name{
+            background: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+            color: #1C1C1C;
+            padding: 12px 25px 12px 25px;
+            flex-basis: 100%;
+
+            @media (max-width: 1300px) {
+                flex-basis: 32%;
+                margin-top: 0;
+            }
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 150%;
+            }
+
+            @include mobile {
+                flex-basis: 100%;
+            }
+        }
+        &__email{
+            background: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+            color: #1C1C1C;
+            padding: 12px 25px 12px 25px;
+            margin-top: 20px;
+            flex-basis: 48%;
+            border: 1px solid #fff;
+
+            @media (max-width: 1300px) {
+                flex-basis: 32%;
+                margin-top: 0;
+            }
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 150%;
+            }
+
+            @include mobile {
+                flex-basis: 100%;
+                margin-top: 20px;
+            }
+        }
+        &__phone{
+            background: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+            color: #1C1C1C;
+            padding: 12px 25px 12px 25px;
+            margin-top: 20px;
+            flex-basis: 48%;
+            border: 1px solid #fff;
+
+            @media (max-width: 1300px) {
+                flex-basis: 32%;
+                margin-top: 0;
+            }
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 150%;
+            }
+
+            @include mobile {
+                flex-basis: 100%;
+                margin-top: 20px;
+            }
+        }
+        &__msg{
+            margin-top: 20px;
+            background: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+            color: #1C1C1C;
+            padding: 12px 25px 12px 25px;
+            height: 110px;
+            border: 1px solid #fff;
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 150%;
+                height: 80px;
+            }
+        }
+        &__wrap{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__checkbox{
+            &-wrap{
+                margin-top: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @include tablet {
+                    margin-top: 30px;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-top: 23px;
+                }
+            }
+        }
+        &__label{
+            color: #fff;
+            font-size: 16px;
+            line-height: 19px;
+
+            >a{
+                color: #37A58C;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            @include mobile {
+                
+            }
+        }
+        &__btn {
+            max-width: 155px;
+            padding-right: 15px;
+            padding-left: 20px;
+            &:hover:before{
+                left: -45px;
+                }
+            @include tablet {
+                margin-top: 20px;
+            }
+
+            span {
+                position: relative;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                line-height: 20px;
+
+                img {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+
+    &__popup {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        opacity: 0;
+        visibility: hidden;
+
+        &--success {
+            background-color: rgba(55, 165, 140, 0.7);
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &--error {
+            background-color: rgba(215, 68, 62, 0.7);
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &-content {
+            background-color: #fff;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+
+            @include tablet {
+                padding: 25px;
+            }
+
+            @include mobile {
+                padding: 20px;
+            }
+        }
+
+        &-image {
+            width: 40px;
+            align-self: center;
+
+            @include tablet {
+                width: 35px;
+            }
+
+            @include mobile {
+                width: 30px;
+            }
+        }
+
+        &-title {
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: bold;
+            margin-top: 20px;
+
+            @include tablet {
+                font-size: 24px;
+                line-height: 29px;
+            }
+            @include mobile {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    &-info{
+        width: 100%;
+        &__wrap{
+            display: flex;
+            background: #FFF;
+            align-items: center;
+            margin-top: 35px;
+            padding: 20px;
+
+            @include tablet {
+                flex-wrap: wrap;
+            }
+        }
+        &__title{
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 36px;
+            color: #FFFFFF;
+
+            @include tablet {
+                font-size: 28px;
+                line-height: 31px;
+            }
+
+            @include mobile {
+                font-size: 24px;
+                line-height: 26px;
+            }
+        }
+        &__subtitle{
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 17px;
+            color: #5F5F5F;
+
+            @include mobile {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        &__name{
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: #1C1C1C;
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        &__adress{
+            display: flex;
+            flex-direction: column;
+            margin-right: 25px;
+            align-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        &__phone{
+            display: flex;
+            flex-direction: column;
+            margin-right: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        &__email{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__map {
+        flex-basis: 47.5%;
+        margin-left: 3.6%;
+        margin-top: -178px;
+
+        @media (max-width: 1300px) {
+            flex-basis: 100%;
+            margin-top: 30px;
+            margin-left: 0;
+            margin: 30px 0 0 0;
+            order: 2;
+            height: 350px;
+        }
+
+        @include mobile {
+            order: 3;
+            margin-top: 10px;
+        }
+
+        @include tablet {
+            height: 290px;
+            margin-top: 27px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            
+            @media (max-width: 1300px) {
+                height: 350px;
+            }
+
+            @include tablet {
+                height: 290px;
+            }
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+input{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+}
