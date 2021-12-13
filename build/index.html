@@ -12,21 +12,22 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container-wide">
         <div class="header__inner"> <a class="header__logo-link" href=""> <img class="header__logo logo" src="img/logo.svg" alt="REHAU"></a>
           <div class="header-wrapper">
             <nav class="header-nav">
               <ul class="header-nav__list">
+                <li class="header-nav__item"><a href="#">Посетителям</a></li>
+                <li class="header-nav__item"><a href="#">Преимущества</a></li>
+                <li class="header-nav__item"><a href="#">Видео</a></li>
+                <li class="header-nav__item"><a href="#">Фото</a></li>
                 <li class="header-nav__item"><a href="#">Услуги</a></li>
-                <li class="header-nav__item"><a href="#">Наши работы</a></li>
-                <li class="header-nav__item"><a href="#">Стоимость работ</a></li>
+                <li class="header-nav__item"><a href="#">Системы</a></li>
                 <li class="header-nav__item"><a href="#">Контакты</a></li>
-                <li class="header-nav__item"><a href="#">Оставить заявку</a></li>
               </ul>
             </nav>
             <div class="header__contacts">
-              <div class="header__contacts-item"> <img src="img/contacts/pin.svg" alt="">г. Москва, ул. Народная 8, оф. 33</div>
-              <div class="header__contacts-item"> <img src="img/contacts/clock.svg" alt="">Пн-Вс: 9:00 - 21:00</div><a class="header__contacts-item" href="tel:+74957698628"> <img src="img/contacts/phone.svg" alt="">+7(495) 769-86-28</a>
+              <div class="header__contacts-item"> <span class="header__contacts-title">Адрес офиса:</span><span class="header__contacts-text">г. Москва, ул. Профсоюзная, дом 93А, офис 25</span></div><a class="header__contacts-item" href="tel:+79859285582"> <span class="header__contacts-title">Контактный телефон:</span><span class="header__contacts-text">+7 985 928 55-82</span></a>
             </div>
           </div>
           <div class="sh-burger"><span></span></div>
@@ -38,18 +39,15 @@
       <section class="hero"> 
         <div class="hero__slider">
            <button class="hero-slider__prev"><img src="img/hero/slider-arrow.svg" alt="arrow"></button>
-          <div class="hero__slider hero-slider">
-            <div class="hero-slider__item"> <img class="hero-slider__item-img" src="img/hero/hero-1.jpg" alt=""></div>
-            <div class="hero-slider__item"> <img class="hero-slider__item-img" src="img/hero/hero-1.jpg" alt=""></div>
-            <div class="hero-slider__item"> <img class="hero-slider__item-img" src="img/hero/hero-1.jpg" alt=""></div>
+          <div class="hero__slider">
             <div class="hero-slider__item"> <img class="hero-slider__item-img" src="img/hero/hero-1.jpg" alt=""></div>
           </div><button class="hero-slider__next"><img src="img/hero/slider-arrow.svg" alt="arrow"></button>
         </div>
         <div class="container hero__content">
           <div class="hero__inner">
             <div class="hero__info">
-              <h1 class="hero__info-title">Занимаемся монтажом труб REHAU вот уже более 5 лет </h1>
-              <p class="hero__info-text">В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг. В нашем портфолио десятки качественных работ и довольных клиентов. В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг.</p>
+              <h1 class="hero__info-title">КОМПЛЕКСНЫЙ РЕМОНТ КВАРТИР И КОТТЕДЖЕЙ</h1>
+              <p class="hero__info-text">Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение соответствующий условий активизации.</p>
               <button class="hero__info-btn btn" data-popup="order"><span class="btn__content">
                    Заказать звонок<img src="img/btn-arrow.svg" alt=""></span></button>
             </div>
@@ -64,13 +62,16 @@
                   <h4 class="hero__popup-title">Произошла ошибка</h4>
                 </div>
               </div>
-              <h3 class="hero__form-title">Оставьте заявку на услугу</h3>
-              <p class="hero__form-subtitle">И наш специалист свяжется с вами в самое ближайшее время</p>
+              <h3 class="hero__form-title">УЗНАЙТЕ СТОИМОСТЬ РЕМОНТА</h3>
+              <p class="hero__form-subtitle"> </p>
               <form class="hero__form-form hero-form js-form" action="#"> 
                 <input class="hero-form__name iscomplete" placeholder="Ваше имя" type="text" data-validate-field="name">
-                <input class="hero-form__phone iscomplete" placeholder="Ваш телефон" type="phone" data-validate-field="phone">
+                <div class="hero-form__group">
+                  <input class="hero-form__phone iscomplete" placeholder="Ваш телефон" type="phone" data-validate-field="phone">
+                  <input class="hero-form__email iscomplete" placeholder="Ваш email" type="email" data-validate-field="email">
+                </div>
                 <select class="hero-form__select" name="dd" id="dd">
-                  <option value="1" disabled selected hidden>Какая услуга интересует?</option>
+                  <option value="1" disabled selected hidden>Выберите объект ремонта</option>
                   <option value="2">Какая услуга интересует?</option>
                   <option value="3">Какая услуга интересует?</option>
                   <option value="4">Какая услуга интересует?</option>
@@ -80,7 +81,7 @@
                   <input class="hero-form__checkbox" id="cb2" type="checkbox" name="cb2" data-validate-field="checkbox">
                   <label class="hero-form__label" for="cb2">
                      Доверяю свои <br><a href="#">персональные данные</a></label>
-                  <button class="hero-form__btn btn"><span class="btn__content">Отправить<img src="img/btn-arrow.svg" alt=""></span></button>
+                  <button class="hero-form__btn btn"><span class="btn__content">Заказать<img src="img/btn-arrow.svg" alt=""></span></button>
                 </div>
               </form>
             </div>
@@ -93,22 +94,121 @@
             <h2 class="advantage__title title">Наши преимущества</h2>
             <div class="advantage__items">
               <div class="advantage__item">
-                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/like.svg" alt=""><span class="advantage__item-title">3 года гарантии на все работы</span></div>
-                <p class="advantage__item-text">Не следует, однако забывать, что рамки и место обучения кадров способствует подготовки и реализации соответствующий условий активизации.</p>
+                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/i-1.svg" alt=""><span class="advantage__item-title">Работа без предоплаты</span></div>
+                <p class="advantage__item-text"></p>
               </div>
               <div class="advantage__item"> 
-                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/certificate.svg" alt=""><span class="advantage__item-title">3 года гарантии на все работы</span></div>
-                <p class="advantage__item-text">Не следует, однако забывать, что рамки и место обучения кадров способствует подготовки и реализации соответствующий условий активизации.</p>
+                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/i-2.svg" alt=""><span class="advantage__item-title">Гарантия на работы 24 месяца</span></div>
+                <p class="advantage__item-text"></p>
               </div>
               <div class="advantage__item"> 
-                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/money.svg" alt=""><span class="advantage__item-title">3 года гарантии на все работы</span></div>
-                <p class="advantage__item-text">Не следует, однако забывать, что рамки и место обучения кадров способствует подготовки и реализации соответствующий условий активизации.</p>
+                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/i-3.svg" alt=""><span class="advantage__item-title">Соблюдение сроков</span></div>
+                <p class="advantage__item-text"></p>
               </div>
               <div class="advantage__item"> 
-                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/money2.svg" alt=""><span class="advantage__item-title">3 года гарантии на все работы</span></div>
-                <p class="advantage__item-text">Не следует, однако забывать, что рамки и место обучения кадров способствует подготовки и реализации соответствующий условий активизации.</p>
+                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/i-4.svg" alt=""><span class="advantage__item-title">Контроль качества работ</span></div>
+                <p class="advantage__item-text"></p>
+              </div>
+              <div class="advantage__item"> 
+                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/i-5.svg" alt=""><span class="advantage__item-title">Фиксированная стоимость</span></div>
+                <p class="advantage__item-text">      </p>
+              </div>
+              <div class="advantage__item"> 
+                <div class="advantage__item-wrap"> <img class="advantage__item-img" src="img/advantage/i-6.svg" alt=""><span class="advantage__item-title">Работа по договору</span></div>
+                <p class="advantage__item-text">                                          </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="video">
+        <div class="container"> 
+          <h2 class="video__title title">ВИДЕООБЗОРЫ</h2>
+          <div class="video__inner">
+            <button class="video-slider__prev"><img src="img/hero/slider-arrow.svg" alt=""></button>
+            <div class="video__wrapper">
+              <div class="video__big video-container"><img class="video__item-img" src="img/video/big.jpg" alt="">
+                <div class="video__item-wrap"> 
+                  <div class="video__item-info"> 
+                    <div class="video__item-name">Монтаж водоснабжения</div>
+                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                  </div>
+                </div>
+                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="video__item video-container"><img class="video__item-img" src="img/video/small.jpg" alt="">
+                <div class="video__item-wrap"> 
+                  <div class="video__item-info"> 
+                    <div class="video__item-name">Монтаж водоснабжения</div>
+                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                  </div>
+                </div>
+                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="video__item video-container"><img class="video__item-img" src="img/video/small2.jpg" alt="">
+                <div class="video__item-wrap"> 
+                  <div class="video__item-info"> 
+                    <div class="video__item-name">Монтаж водоснабжения</div>
+                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                  </div>
+                </div>
+                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="video__item video-container"><img class="video__item-img" src="img/video/small3.jpg" alt="">
+                <div class="video__item-wrap"> 
+                  <div class="video__item-info"> 
+                    <div class="video__item-name">Монтаж водоснабжения</div>
+                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                  </div>
+                </div>
+                <div class="video__item-video" data-embed="G1DsbIwXOb0"> </div>
+                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="video__item video-container"><img class="video__item-img" src="img/video/small4.jpg" alt="">
+                <div class="video__item-wrap"> 
+                  <div class="video__item-info">
+                    <div class="video__item-name">Монтаж водоснабжения</div>
+                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                  </div>
+                </div>
+                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="video__item video-container"><img class="video__item-img" src="img/video/small4.jpg" alt="">
+                <div class="video__item-wrap"> 
+                  <div class="video__item-info">
+                    <div class="video__item-name">Монтаж водоснабжения</div>
+                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                  </div>
+                </div>
+                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="video__item video-container"><img class="video__item-img" src="img/video/small4.jpg" alt="">
+                <div class="video__item-wrap"> 
+                  <div class="video__item-info">
+                    <div class="video__item-name">Монтаж водоснабжения</div>
+                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                  </div>
+                </div>
+                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="video__item video-container"><img class="video__item-img" src="img/video/small4.jpg" alt="">
+                <div class="video__item-wrap"> 
+                  <div class="video__item-info">
+                    <div class="video__item-name">Монтаж водоснабжения</div>
+                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                  </div>
+                </div>
+                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+            </div>
+            <button class="video-slider__next"><img src="img/hero/slider-arrow.svg" alt=""></button>
           </div>
         </div>
       </section>
@@ -169,126 +269,88 @@
           </div>
         </div>
       </section>
-      <section class="video">
-        <div class="container"> 
-          <h2 class="video__title title">Видео</h2>
-          <div class="video__inner">
-            <button class="video-slider__prev"><img src="img/hero/slider-arrow.svg" alt=""></button>
-            <div class="video__wrapper">
-              <div class="video__big video-container"><img class="video__item-img" src="img/video/big.jpg" alt="">
-                <div class="video__item-wrap"> 
-                  <div class="video__item-info"> 
-                    <div class="video__item-name">Монтаж водоснабжения</div>
-                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
-                  </div>
-                </div>
-                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
-                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
-              </div>
-              <div class="video__item video-container"><img class="video__item-img" src="img/video/small.jpg" alt="">
-                <div class="video__item-wrap"> 
-                  <div class="video__item-info"> 
-                    <div class="video__item-name">Монтаж водоснабжения</div>
-                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
-                  </div>
-                </div>
-                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
-                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
-              </div>
-              <div class="video__item video-container"><img class="video__item-img" src="img/video/small2.jpg" alt="">
-                <div class="video__item-wrap"> 
-                  <div class="video__item-info"> 
-                    <div class="video__item-name">Монтаж водоснабжения</div>
-                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
-                  </div>
-                </div>
-                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
-                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
-              </div>
-              <div class="video__item video-container"><img class="video__item-img" src="img/video/small3.jpg" alt="">
-                <div class="video__item-wrap"> 
-                  <div class="video__item-info"> 
-                    <div class="video__item-name">Монтаж водоснабжения</div>
-                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
-                  </div>
-                </div>
-                <div class="video__item-video" data-embed="G1DsbIwXOb0"> </div>
-                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
-              </div>
-              <div class="video__item video-container"><img class="video__item-img" src="img/video/small4.jpg" alt="">
-                <div class="video__item-wrap"> 
-                  <div class="video__item-info">
-                    <div class="video__item-name">Монтаж водоснабжения</div>
-                    <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
-                  </div>
-                </div>
-                <div class="video__item-video" data-embed="G1DsbIwXOb0"></div>
-                <button class="video__button"><img src="img/video/play.svg" alt=""></button>
-              </div>
-            </div>
-            <button class="video-slider__next"><img src="img/hero/slider-arrow.svg" alt=""></button>
-          </div>
-        </div>
-      </section>
-      <section class="price">
-        <div class="container">
-          <h2 class="price__title title">Наши цены</h2>
-          <div class="price__inner"> 
-            <ul class="price__list"> 
-              <li class="price__head"><span class="price__head-title">Название услуги</span><span class="price__head-price">Стоимость<span>(за точку)</span></span></li>
-              <li class="price__item"> <span class="price__item-name">Монтаж воздуховода</span><span class="price__item-price">3 500 ₽</span></li>
-              <li class="price__item"> <span class="price__item-name">Монтаж корпуса на профиль</span><span class="price__item-price">3 500 ₽</span></li>
-              <li class="price__item"> <span class="price__item-name">Монтаж воздуховода</span><span class="price__item-price">3 500 ₽</span></li>
-            </ul>
-            <ul class="price__list"> 
-              <li class="price__head price__head--mobile"><span class="price__head-title">Название услуги</span><span class="price__head-price">Стоимость (за точку)</span></li>
-              <li class="price__item"> <span class="price__item-name">Монтаж воздуховода</span><span class="price__item-price">3 500 ₽</span></li>
-              <li class="price__item"> <span class="price__item-name">Монтаж воздуховода</span><span class="price__item-price">3 500 ₽</span></li>
-              <li class="price__item"><span class="price__item-name">Монтаж воздуховода</span><span class="price__item-price">3 500 ₽</span></li>
-              <li class="price__item"><span class="price__item-name">Монтаж воздуховода</span><span class="price__item-price">3 500 ₽</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
       <section class="other">
-        <div class="container"> 
-          <h2 class="other__title title">Другие наши услуги</h2>
+        <div class="container">
+          <div class="other__heading">
+            <h2 class="other__title title">услуги</h2>
+            <div class="other__heading-buttons">
+              <button class="other-button other__prev">
+                <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21L2 11L12 0.999999" stroke="#111111" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
+              </button>
+              <button class="other-button other__next">
+                <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L11 11L1 21" stroke="#111111" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="container container-slider">    
           <div class="other__inner"> 
-            <div class="other__item"> 
-              <h3 class="other__item-name">Монтаж теплого пола REHAU</h3><img class="other__item-img" src="img/other/1.jpg" alt="">
+            <div class="other__item"> <img class="other__item-img" src="img/other/1.jpg" alt="">
               <div class="other__item-info-wrapper">
-                <h3 class="other__item-name other__item-name--tablet">Монтаж теплого пола REHAU</h3>
+                <h3 class="other__item-name other__item-name--tablet">Демонтажные  работы от</h3><span class="other__item-price">55 555 ₽</span>
                 <ul class="other__item-list other__list">
-                  <li class="other__list-item"> <span>новая модель организационной деятельности позволяет выполнять важные задания поразработке системы обучения кадров,  соответствуетнасущным потребностям.</span></li>
-                  <li class="other__list-item"> <span>интересный эксперимент проверк новых предложений</span></li>
-                  <li class="other__list-item"> <span>дальнейшее развитие различных форм </span></li>
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий требуют от нас анализа систем.</span></li>
+                  <li class="other__list-item"> <span>Сложившаяся структура организации требуют определения и уточнения направлений развития.</span></li>
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий играет важную роль в формировании модели развития.</span></li>
                 </ul>
-                <div class="other__item-info"> <span class="other__item-price">от 900 ₽/час</span><a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"> <span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
+                <div class="other__item-info"> <a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"> <span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
               </div>
             </div>
-            <div class="other__item"> 
-              <h3 class="other__item-name">Монтаж теплого пола REHAU</h3><img class="other__item-img" src="img/other/1.jpg" alt="">
+            <div class="other__item"> <img class="other__item-img" src="img/other/1.jpg" alt="">
               <div class="other__item-info-wrapper">
-                <h3 class="other__item-name other__item-name--tablet">Монтаж теплого пола REHAU</h3>
+                <h3 class="other__item-name other__item-name--tablet">Простой ремонт от</h3><span class="other__item-price">55 555 ₽</span>
                 <ul class="other__item-list other__list">
-                  <li class="other__list-item"> <span>новая модель организационной деятельности позволяет выполнять важные задания поразработке системы обучения кадров,  соответствуетнасущным потребностям.</span></li>
-                  <li class="other__list-item"> <span>интересный эксперимент проверк новых предложений</span></li>
-                  <li class="other__list-item"> <span>дальнейшее развитие различных форм </span></li>
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий требуют от нас анализа систем.</span></li>
+                  <li class="other__list-item"> <span>Сложившаяся структура организации требуют определения и уточнения направлений развития.</span></li>
                 </ul>
-                <div class="other__item-info"><span class="other__item-price">от 900 ₽/час</span><a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"><span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
+                <div class="other__item-info"> <a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"> <span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
               </div>
             </div>
-            <div class="other__item"> 
-              <h3 class="other__item-name">Монтаж теплого пола REHAU</h3><img class="other__item-img" src="img/other/1.jpg" alt="">
+            <div class="other__item"> <img class="other__item-img" src="img/other/1.jpg" alt="">
               <div class="other__item-info-wrapper">
-                <h3 class="other__item-name other__item-name--tablet">Монтаж теплого пола REHAU</h3>
+                <h3 class="other__item-name other__item-name--tablet">Дизайнерский ремонт от</h3><span class="other__item-price">55 555 ₽</span>
                 <ul class="other__item-list other__list">
-                  <li class="other__list-item"> <span>новая модель организационной деятельности позволяет выполнять важные задания поразработке системы обучения кадров,  соответствуетнасущным потребностям.</span></li>
-                  <li class="other__list-item"><span>интересный эксперимент проверк новых предложений</span></li>
-                  <li class="other__list-item"> <span>дальнейшее развитие различных форм </span></li>
-                  <li class="other__list-item"> <span>новая модель организационной деятельности позволяет выполнять важные задания поразработке системы обучения кадров,  соответствуетнасущным потребностям. </span></li>
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий требуют от нас анализа систем.</span></li>
+                  <li class="other__list-item"> <span>Сложившаяся структура организации требуют определения и уточнения направлений развития.</span></li>
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий играет важную роль в формировании модели развития.</span></li>
                 </ul>
-                <div class="other__item-info"> <span class="other__item-price">от 900 ₽/час</span><a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"><span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
+                <div class="other__item-info"> <a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"> <span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
+              </div>
+            </div>
+            <div class="other__item"> <img class="other__item-img" src="img/other/1.jpg" alt="">
+              <div class="other__item-info-wrapper">
+                <h3 class="other__item-name other__item-name--tablet">Демонтажные  работы от</h3><span class="other__item-price">55 555 ₽</span>
+                <ul class="other__item-list other__list">
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий требуют от нас анализа систем.</span></li>
+                  <li class="other__list-item"> <span>Сложившаяся структура организации требуют определения и уточнения направлений развития.</span></li>
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий играет важную роль в формировании модели развития.</span></li>
+                </ul>
+                <div class="other__item-info"> <a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"> <span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
+              </div>
+            </div>
+            <div class="other__item"> <img class="other__item-img" src="img/other/1.jpg" alt="">
+              <div class="other__item-info-wrapper">
+                <h3 class="other__item-name other__item-name--tablet">Простой ремонт от</h3><span class="other__item-price">55 555 ₽</span>
+                <ul class="other__item-list other__list">
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий требуют от нас анализа систем.</span></li>
+                  <li class="other__list-item"> <span>Сложившаяся структура организации требуют определения и уточнения направлений развития.</span></li>
+                </ul>
+                <div class="other__item-info"> <a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"> <span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
+              </div>
+            </div>
+            <div class="other__item"> <img class="other__item-img" src="img/other/1.jpg" alt="">
+              <div class="other__item-info-wrapper">
+                <h3 class="other__item-name other__item-name--tablet">Дизайнерский ремонт от</h3><span class="other__item-price">55 555 ₽</span>
+                <ul class="other__item-list other__list">
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий требуют от нас анализа систем.</span></li>
+                  <li class="other__list-item"> <span>Сложившаяся структура организации требуют определения и уточнения направлений развития.</span></li>
+                  <li class="other__list-item"> <span>Равным образом реализация намеченных плановых заданий играет важную роль в формировании модели развития.</span></li>
+                </ul>
+                <div class="other__item-info"> <a class="other__item-btn btn" data-popup="order" href="#"> <span class="btn__content other__item-btn-content"> <span>Заказать</span><img src="img/btn-arrow.svg" alt=""></span></a></div>
               </div>
             </div>
           </div>
@@ -297,42 +359,48 @@
       <section class="info">
         <div class="container"> 
           <div class="info__inner"> 
-            <div class="info__contacts-info info-info"> 
-              <h2 class="info-info__title">Контактная информация</h2>
-              <div class="info-info__wrap"> 
-                <div class="info-info__adress"> <span class="info-info__adress-subtitle info-info__subtitle">Адрес</span><span class="info-info__adress-name info-info__name">г. Москва, ул. Народная 8, оф. 33</span></div>
-                <div class="info-info__phone"> <span class="info-info__adress-subtitle info-info__subtitle">Телефон</span><span class="info-info__adress-name info-info__name">+7(495) 769-86-28</span></div>
-                <div class="info-info__email"> <span class="info-info__adress-subtitle info-info__subtitle">Email</span><span class="info-info__adress-name info-info__name">reh@email.com</span></div>
+            <div class="info__map" id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11203.477324796913!2d37.64232587767989!3d55.73693859780042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ0JzE5LjQiTiAzN8KwMzknMDQuMSJF!5e0!3m2!1sru!2s!4v1620927871049!5m2!1sru!2s" style="border:0; width=100%; height=100%; " allowfullscreen="" loading="lazy"></iframe>    </div>
+            <div class="info__data">
+              <div class="info__contacts-info info-info"> 
+                <h2 class="info-info__title">Контактная информация</h2>
+                <div class="info-info__wrap"> 
+                  <div class="info-info__adress"> <span class="info-info__adress-subtitle info-info__subtitle">Адрес</span><span class="info-info__adress-name info-info__name">г. Москва, ул. Профсоюзная, дом 93А, офис 25</span></div>
+                  <div class="info-info__email"> <span class="info-info__email-subtitle info-info__subtitle">Email</span><a class="info-info__name" href="mailto:15325@compan.com">15325@compan.com</a></div>
+                  <div class="info-info__phone"> <span class="info-info__phone-subtitle info-info__subtitle">Контактный телефон:</span><a class="info-info__phone-name info-info__name" href="tel:+79859285582">+7 985-928-55-82</a><a class="info-info__phone-name info-info__name" href="tel:+74957207297">+7 495-720-72-97</a></div>
+                  <div class="info-info__time"><span class="info-info__time-subtitle info-info__subtitle">График работы</span><span class="info-info__time-name info-info__name">ПН-ВС: 9-00 - 21-00</span></div>
+                  <div class="info-info__socials socials"><span class="info-info__socials-subtitle info-info__subtitle">Соцсети</span>
+                    <div class="socials-wrapper"><a class="socials-item" href="#"><img src="img/socials/social.svg" alt="Social name"></a><a class="socials-item" href="#"><img src="img/socials/social.svg" alt="Social name"></a><a class="socials-item" href="#"><img src="img/socials/social.svg" alt="Social name"></a><a class="socials-item" href="#"><img src="img/socials/social.svg" alt="Social name"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="info__contacts-form">
+                <h2 class="info__contacts-form__title">Проконсультируйтесь с нами</h2>
+                <div class="info__popup info__popup--success">
+                  <div class="info__popup-content"><img class="info__popup-image" src="img/success.svg" alt="">
+                    <h4 class="info__popup-title">Ваша заявка отправлена</h4>
+                  </div>
+                </div>
+                <div class="info__popup info__popup--error">
+                  <div class="info__popup-content"><img class="info__popup-image" src="img/error.svg" alt="">
+                    <h4 class="info__popup-title">Произошла ошибка</h4>
+                  </div>
+                </div>
+                <form class="info-form info__contacts-form__form js-form-info">
+                  <div class="info-form__wrap">
+                    <input class="info-form__name iscomplete" placeholder="Ваше имя" type="text" data-validate-field="name">
+                    <input class="info-form__email iscomplete" type="text" placeholder="Email" data-validate-field="email">
+                    <input class="info-form__phone iscomplete" type="phone" placeholder="Телефон" data-validate-field="phone">
+                  </div>
+                  <textarea class="info-form__msg iscomplete" name="msg" placeholder="Сообщение" data-validate-field="text"></textarea>
+                  <div class="info-form__checkbox-wrap">
+                    <input class="info-form__checkbox" id="cb1" type="checkbox" name="cb1" data-validate-field="checkbox">
+                    <label class="info-form__label" for="cb1">
+                       Соглашаюсь с <a href="#">политикой конфиденциальности</a></label>
+                    <button class="info-form__btn btn"> <span class="btn__content">Отправить<img src="img/btn-arrow.svg" alt=""></span></button>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="info__contacts-form">
-              <h2 class="info__contacts-form__title">Закажите бесплатную консультацию</h2>
-              <div class="info__popup info__popup--success">
-                <div class="info__popup-content"><img class="info__popup-image" src="img/success.svg" alt="">
-                  <h4 class="info__popup-title">Ваша заявка отправлена</h4>
-                </div>
-              </div>
-              <div class="info__popup info__popup--error">
-                <div class="info__popup-content"><img class="info__popup-image" src="img/error.svg" alt="">
-                  <h4 class="info__popup-title">Произошла ошибка</h4>
-                </div>
-              </div>
-              <form class="info-form info__contacts-form__form js-form-info">
-                <div class="info-form__wrap">
-                  <input class="info-form__name iscomplete" placeholder="Ваше имя" type="text" data-validate-field="name">
-                  <input class="info-form__email iscomplete" type="text" placeholder="Email" data-validate-field="email">
-                  <input class="info-form__phone iscomplete" type="phone" placeholder="Телефон" data-validate-field="phone">
-                </div>
-                <textarea class="info-form__msg iscomplete" name="msg" placeholder="Сообщение" data-validate-field="text"></textarea>
-                <div class="info-form__checkbox-wrap">
-                  <input class="info-form__checkbox" id="cb1" type="checkbox" name="cb1" data-validate-field="checkbox">
-                  <label class="info-form__label" for="cb1">
-                     Соглашаюсь с <a href="#">политикой конфиденциальности</a></label>
-                  <button class="info-form__btn btn"> <span class="btn__content">Отправить<img src="img/btn-arrow.svg" alt=""></span></button>
-                </div>
-              </form>
-            </div>
-            <div class="info__map" id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11203.477324796913!2d37.64232587767989!3d55.73693859780042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ0JzE5LjQiTiAzN8KwMzknMDQuMSJF!5e0!3m2!1sru!2s!4v1620927871049!5m2!1sru!2s" style="border:0; width=100%; height=100%; " allowfullscreen="" loading="lazy"></iframe></div>
           </div>
         </div>
       </section>
@@ -360,19 +428,15 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer__inner"> <a class="footer__logo-link" href="/"><img class="footer__logo logo" src="img/logo.svg" alt="REHAU"></a>
-          <nav class="footer-nav"> 
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item"><a href="#">Услуги</a></li>
-              <li class="footer-nav__item"><a href="#">Наши работы</a></li>
-              <li class="footer-nav__item"><a href="#">Стоимость работ</a></li>
-              <li class="footer-nav__item"><a href="#">Контакты</a></li>
-              <li class="footer-nav__item"><a href="#">Оставить заявку </a></li>
-            </ul>
-          </nav>
-          <div class="footer__info"><span class="footer__info-copywriting">
-               2021 © Все права защищены авторским правом</span>
-            <div class="footer__info-link"> Создание сайта: <a href="#">mockup.digital </a></div>
+        <div class="footer__inner"> 
+          <div class="footer-group footer-group--left"><a class="footer-link footer-link__privacy" href="#">Политика конфиденциальности </a><a class="footer-link footer-link__privacy" href="#">Обработка персональных данных </a></div>
+          <div class="footer-group footer-group--mid"><a class="footer__logo-link" href="/"><img class="footer__logo logo" src="img/logo.svg" alt="REHAU"></a><span class="footer__info-copywriting">
+               2021 © Все права защищены авторским правом</span></div>
+          <div class="footer-group footer-group--right">
+            <div class="footer__socials socials">
+              <div class="socials-wrapper"><a class="socials-item" href="#"><img src="img/socials/social.svg" alt="Social name"></a><a class="socials-item" href="#"><img src="img/socials/social.svg" alt="Social name"></a><a class="socials-item" href="#"><img src="img/socials/social.svg" alt="Social name"></a><a class="socials-item" href="#"><img src="img/socials/social.svg" alt="Social name"></a></div>
+            </div>
+            <div class="footer__info-link"> Создание сайта: <a class="footer-link" href="#">mockup.digital </a></div>
           </div>
         </div>
       </div>

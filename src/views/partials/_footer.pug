@@ -1,9 +1,16 @@
 footer.footer
 	.container
 		div.footer__inner 
-			a.footer__logo-link(href="/")
-				img.footer__logo.logo(src="img/logo.svg", alt="REHAU") 
-			nav.footer-nav 
+			.footer-group.footer-group--left
+				a(href="#").footer-link.footer-link__privacy Политика конфиденциальности 
+				a(href="#").footer-link.footer-link__privacy Обработка персональных данных 
+
+			.footer-group.footer-group--mid
+				a.footer__logo-link(href="/")
+					img.footer__logo.logo(src="img/logo.svg", alt="REHAU")
+				span.footer__info-copywriting 
+					| 2021 © Все права защищены авторским правом
+			//- nav.footer-nav 
 				ul.footer-nav__list
 					li.footer-nav__item
 						a(href="#") Услуги
@@ -15,9 +22,17 @@ footer.footer
 						a(href="#") Контакты
 					li.footer-nav__item
 						a(href="#") Оставить заявку 
-			div.footer__info
-				span.footer__info-copywriting 
-					| 2021 © Все права защищены авторским правом
-				div.footer__info-link
+			.footer-group.footer-group--right
+				.footer__socials.socials
+					.socials-wrapper
+						a(href="#").socials-item
+								img(src="img/socials/social.svg", alt="Social name")
+						a(href="#").socials-item
+								img(src="img/socials/social.svg", alt="Social name")
+						a(href="#").socials-item
+								img(src="img/socials/social.svg", alt="Social name")
+						a(href="#").socials-item
+								img(src="img/socials/social.svg", alt="Social name")
+				.footer__info-link
 					|  Создание сайта: 
-					a(href="#") mockup.digital 
+					a(href="#").footer-link mockup.digital 

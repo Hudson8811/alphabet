@@ -8,8 +8,8 @@
 .container.hero__content
         .hero__inner
             .hero__info
-                h1.hero__info-title Занимаемся монтажом труб REHAU вот уже более 5 лет 
-                p.hero__info-text В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг. В нашем портфолио десятки качественных работ и довольных клиентов. В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг.
+                h1.hero__info-title КОМПЛЕКСНЫЙ РЕМОНТ КВАРТИР И КОТТЕДЖЕЙ
+                p.hero__info-text Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение соответствующий условий активизации.
                 button.hero__info-btn.btn(data-popup="order")
                     span.btn__content 
                         | Заказать звонок
@@ -23,13 +23,15 @@
                     .hero__popup-content
                         img(src="img/error.svg", alt="").hero__popup-image
                         h4.hero__popup-title Произошла ошибка
-                h3.hero__form-title Оставьте заявку на услугу
-                p.hero__form-subtitle И наш специалист свяжется с вами в самое ближайшее время
+                h3.hero__form-title УЗНАЙТЕ СТОИМОСТЬ РЕМОНТА
+                p.hero__form-subtitle 
                 form.hero__form-form.hero-form.js-form(action="#") 
                     input.hero-form__name.iscomplete(placeholder="Ваше имя",type="text", data-validate-field="name")
-                    input.hero-form__phone.iscomplete(placeholder="Ваш телефон",type="phone", data-validate-field="phone")
+                    .hero-form__group
+                        input.hero-form__phone.iscomplete(placeholder="Ваш телефон",type="phone", data-validate-field="phone")
+                        input.hero-form__email.iscomplete(placeholder="Ваш email",type="email", data-validate-field="email")
                     select.hero-form__select(name="dd" id="dd")
-                                option(value="1", disabled, selected, hidden) Какая услуга интересует?
+                                option(value="1", disabled, selected, hidden) Выберите объект ремонта
                                 option(value="2") Какая услуга интересует?
                                 option(value="3") Какая услуга интересует?
                                 option(value="4") Какая услуга интересует?
@@ -41,5 +43,5 @@
                             a(href="#") персональные данные
                         button.hero-form__btn.btn
                             span.btn__content
-                                | Отправить
+                                | Заказать
                                 img(src="img/btn-arrow.svg", alt="")

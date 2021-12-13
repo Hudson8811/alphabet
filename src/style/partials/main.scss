@@ -1,11 +1,11 @@
 input,
 button,
 textarea {
-	font-size: inherit;
-	font-family: inherit;
-	margin: 0;
-	padding: 0;
-	border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 div,
@@ -21,109 +21,141 @@ h5,
 h6,
 a,
 span {
-	outline: none;
-	font-size: inherit;
-	background: transparent;
+  outline: none;
+  font-size: inherit;
+  background: transparent;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a,
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 textarea {
-	resize: none;
+  resize: none;
 }
 
 a {
-	color: inherit;
+  color: inherit;
 }
 
-
 body {
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	color: #323340;
-	background: #FAFAFA;
-	font-family: $mainFont;
-	font-size: 16px;
-	@include media-1400{
-		padding-top: 106px;
-	}
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #111111;
+  background: #fafafa;
+  font-family: $mainFont;
+  font-weight: 300;
+  font-size: 16px;
+  @include media-1400 {
+    padding-top: 106px;
+  }
 
-	@include mobile {
-		padding-top: 70px;
-	}
+  @include mobile {
+    padding-top: 70px;
+  }
 }
 
 .main {
-	flex-grow: 1;
-	background-color: #FAFAFA;
+  flex-grow: 1;
+  background-color: #fafafa;
 }
-html,body{
-	height: 100%;
+html,
+body {
+  height: 100%;
 }
 .container {
-	box-sizing: border-box;
-	width: 1400px;
-	max-width: 95%;
-	max-width: calc(100% - 30px * 2);
-	margin: 0 auto;
+  box-sizing: border-box;
+  width: 1400px;
+  max-width: 95%;
+  max-width: calc(100% - 30px * 2);
+  margin: 0 auto;
+}
+.container-wide {
+  box-sizing: border-box;
+  max-width: 1710px;
+  margin: 0 auto;
+
+  @include media-1720 {
+    padding: 0 30px;
+  }
+}
+.container-slider {
+  @media screen and (width: 1920px) {
+    box-sizing: border-box;
+    max-width: 1920px;
+    width: 1643px;
+    margin: 0 auto 0 260px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-	.container {
-		max-width: calc(100% - 100px * 2);
-	}
+  .container {
+    max-width: calc(100% - 100px * 2);
+  }
+
+  .container-wide {
+    margin: 0;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 550px) {
-	.container {
-		max-width: calc(100% - 15px * 2);
-	}
+  .container,
+  .container-wide {
+    max-width: calc(100% - 15px * 2);
+  }
+
+  .container-wide {
+    padding: 0 0 0 15px;
+  }
 }
 
 #jGrowl {
-	z-index: 999999;
+  z-index: 999999;
 }
 
 *:focus {
-	outline: none;
+  outline: none;
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
 
-	-webkit-locale: auto;
-	white-space: normal;
-	&.compensate-for-scrollbar{
-		overflow: hidden;
-	}
+  -webkit-locale: auto;
+  white-space: normal;
+  &.compensate-for-scrollbar {
+    overflow: hidden;
+  }
 }
 
 html {
-	-moz-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	-o-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-.js-validate-error-label{
-	display: none;
+.js-validate-error-label {
+  display: none;
+}
+
+input::placeholder {
+  color: $black;
 }

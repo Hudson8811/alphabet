@@ -1,42 +1,58 @@
 .container  
     .info__inner 
-        .info__contacts-info.info-info 
-            h2.info-info__title Контактная информация
-            .info-info__wrap 
-                .info-info__adress 
-                    span.info-info__adress-subtitle.info-info__subtitle Адрес
-                    span.info-info__adress-name.info-info__name г. Москва, ул. Народная 8, оф. 33
-                .info-info__phone 
-                    span.info-info__adress-subtitle.info-info__subtitle Телефон
-                    span.info-info__adress-name.info-info__name +7(495) 769-86-28
-                .info-info__email 
-                    span.info-info__adress-subtitle.info-info__subtitle Email
-                    span.info-info__adress-name.info-info__name reh@email.com
-        .info__contacts-form
-            h2.info__contacts-form__title Закажите бесплатную консультацию
-            .info__popup.info__popup--success
-                .info__popup-content
-                    img(src="img/success.svg", alt="").info__popup-image
-                    h4.info__popup-title Ваша заявка отправлена
-            .info__popup.info__popup--error
-                .info__popup-content
-                    img(src="img/error.svg", alt="").info__popup-image
-                    h4.info__popup-title Произошла ошибка
-            form.info-form.info__contacts-form__form.js-form-info
-                .info-form__wrap
-                    input.info-form__name.iscomplete(placeholder="Ваше имя",type="text",data-validate-field="name")
-                    input.info-form__email.iscomplete(type="text",placeholder="Email",data-validate-field="email")
-                    input.info-form__phone.iscomplete(type="phone",placeholder="Телефон",data-validate-field="phone")
-                textarea.info-form__msg.iscomplete(name="msg",placeholder="Сообщение", data-validate-field="text")
-                .info-form__checkbox-wrap
-                    input#cb1.info-form__checkbox(type="checkbox", name="cb1", data-validate-field="checkbox")
-                    label.info-form__label(for="cb1") 
-                        | Соглашаюсь с 
-                        a(href="#") политикой конфиденциальности
-                    button.info-form__btn.btn 
-                        span.btn__content
-                            | Отправить
-                            img(src="img/btn-arrow.svg", alt="")
-                            
         .info__map#map
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11203.477324796913!2d37.64232587767989!3d55.73693859780042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ0JzE5LjQiTiAzN8KwMzknMDQuMSJF!5e0!3m2!1sru!2s!4v1620927871049!5m2!1sru!2s" style="border:0; width=100%; height=100%; " allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11203.477324796913!2d37.64232587767989!3d55.73693859780042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ0JzE5LjQiTiAzN8KwMzknMDQuMSJF!5e0!3m2!1sru!2s!4v1620927871049!5m2!1sru!2s" style="border:0; width=100%; height=100%; " allowfullscreen="" loading="lazy"></iframe>    
+        .info__data
+            .info__contacts-info.info-info 
+                h2.info-info__title Контактная информация
+                .info-info__wrap 
+                    .info-info__adress 
+                        span.info-info__adress-subtitle.info-info__subtitle Адрес
+                        span.info-info__adress-name.info-info__name г. Москва, ул. Профсоюзная, дом 93А, офис 25
+                    .info-info__email 
+                        span.info-info__email-subtitle.info-info__subtitle Email
+                        a(href="mailto:15325@compan.com").info-info__name 15325@compan.com
+                    .info-info__phone 
+                        span.info-info__phone-subtitle.info-info__subtitle Контактный телефон:
+                        a(href="tel:+79859285582").info-info__phone-name.info-info__name +7 985-928-55-82
+                        a(href="tel:+74957207297").info-info__phone-name.info-info__name +7 495-720-72-97
+                    .info-info__time
+                        span.info-info__time-subtitle.info-info__subtitle График работы
+                        span.info-info__time-name.info-info__name ПН-ВС: 9-00 - 21-00
+                    .info-info__socials.socials
+                        span.info-info__socials-subtitle.info-info__subtitle Соцсети
+                        .socials-wrapper
+                            a(href="#").socials-item
+                                img(src="img/socials/social.svg", alt="Social name")
+                            a(href="#").socials-item
+                                img(src="img/socials/social.svg", alt="Social name")
+                            a(href="#").socials-item
+                                img(src="img/socials/social.svg", alt="Social name")
+                            a(href="#").socials-item
+                                img(src="img/socials/social.svg", alt="Social name")                                                                                            
+            .info__contacts-form
+                h2.info__contacts-form__title Проконсультируйтесь с нами
+                .info__popup.info__popup--success
+                    .info__popup-content
+                        img(src="img/success.svg", alt="").info__popup-image
+                        h4.info__popup-title Ваша заявка отправлена
+                .info__popup.info__popup--error
+                    .info__popup-content
+                        img(src="img/error.svg", alt="").info__popup-image
+                        h4.info__popup-title Произошла ошибка
+                form.info-form.info__contacts-form__form.js-form-info
+                    .info-form__wrap
+                        input.info-form__name.iscomplete(placeholder="Ваше имя",type="text",data-validate-field="name")
+                        input.info-form__email.iscomplete(type="text",placeholder="Email",data-validate-field="email")
+                        input.info-form__phone.iscomplete(type="phone",placeholder="Телефон",data-validate-field="phone")
+                    textarea.info-form__msg.iscomplete(name="msg",placeholder="Сообщение", data-validate-field="text")
+                    .info-form__checkbox-wrap
+                        input#cb1.info-form__checkbox(type="checkbox", name="cb1", data-validate-field="checkbox")
+                        label.info-form__label(for="cb1") 
+                            | Соглашаюсь с 
+                            a(href="#") политикой конфиденциальности
+                        button.info-form__btn.btn 
+                            span.btn__content
+                                | Отправить
+                                img(src="img/btn-arrow.svg", alt="")
+                            
