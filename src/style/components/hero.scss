@@ -7,7 +7,7 @@
   }
   &__inner {
     display: flex;
-    padding-top: 117px;
+    padding-top: 115px;
     padding-bottom: 137px;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +17,7 @@
     }
 
     @include mobile {
-      padding-top: 30px;
+      padding-top: 60px;
       padding-bottom: 30px;
     }
   }
