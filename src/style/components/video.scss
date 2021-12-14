@@ -30,7 +30,7 @@
     justify-content: space-between;
 
     @include mobile {
-      height: 350px;
+      height: 300px;
     }
   }
 
@@ -169,18 +169,47 @@
     }
   }
   &-slider {
+    &__button {
+      width: 36px;
+      height: 36px;
+      border: 1px solid $black;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s linear;
+
+      svg {
+        width: 6.5px;
+        height: 11px;
+
+        path {
+          transition: 0.3s linear;
+        }
+      }
+
+      @media screen and (min-width: 1080px) {
+        &:hover {
+          border-color: #c4c4c4;
+
+          svg {
+            path {
+              stroke: #525251;
+            }
+          }
+        }
+      }
+    }
     &__prev {
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 30px;
-      height: 30px;
+      // width: 30px;
+      // height: 30px;
       z-index: 1;
-      background: #e5e5e5;
+      // background: #e5e5e5;
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: rotate(90deg);
+      // transform: rotate(90deg);
       display: none;
 
       @include mobile {
@@ -191,14 +220,14 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 30px;
-      height: 30px;
+      // width: 30px;
+      // height: 30px;
       z-index: 1;
-      background: #e5e5e5;
+      // background: #e5e5e5;
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: rotate(-90deg);
+      // transform: rotate(-90deg);
       display: none;
 
       @include mobile {
@@ -216,7 +245,7 @@
         line-height: 19px;
         text-align: center;
 
-        color: #ffffff;
+        color: $black;
         &:not(:first-child) {
           display: none;
         }
@@ -226,7 +255,7 @@
       font-size: 18px;
       line-height: 22px;
       text-align: center;
-      color: #dd0060;
+      color: $black;
     }
   }
 

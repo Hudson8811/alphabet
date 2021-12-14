@@ -7,6 +7,7 @@
     <meta name="keywords" content="">
     <meta property="og:image" content="images/logo.svg">
     <meta name="format-detection" content="telephone=no">
+    <link href="css/fonts.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <!--title= `${page.title}`-->
   </head>
@@ -27,7 +28,8 @@
               </ul>
             </nav>
             <div class="header__contacts">
-              <div class="header__contacts-item"> <span class="header__contacts-title">Адрес офиса:</span><span class="header__contacts-text">г. Москва, ул. Профсоюзная, дом 93А, офис 25</span></div><a class="header__contacts-item" href="tel:+79859285582"> <span class="header__contacts-title">Контактный телефон:</span><span class="header__contacts-text">+7 985 928 55-82</span></a>
+              <div class="header__contacts-item"> <span class="header__contacts-title">Адрес офиса:</span><span class="header__contacts-text">г. Москва, ул. Профсоюзная, дом 93А, офис 25</span></div>
+              <div class="header__contacts-item"><span class="header__contacts-title">Контактный телефон:</span><a class="header-link header__contacts-text" href="tel:+79859285582">+7 985 928 55-82</a></div>
             </div>
           </div>
           <div class="sh-burger"><span></span></div>
@@ -88,6 +90,15 @@
           </div>
         </div>
       </section>
+      <section class="message">
+        <div class="container"> 
+          <h2 class="message__title title">ВИДЕООБРАЩЕНИЕ</h2>
+          <div class="message-video"><img class="message-video__item-img" src="img/message/message.jpg" alt="">
+            <div class="message-video__item-video" data-embed="G1DsbIwXOb0"></div>
+            <button class="message-video__button"><img src="img/video/play.svg" alt=""></button>
+          </div>
+        </div>
+      </section>
       <section class="advantage">
         <div class="container"> 
           <div class="advantage__inner"> 
@@ -125,7 +136,11 @@
         <div class="container"> 
           <h2 class="video__title title">ВИДЕООБЗОРЫ</h2>
           <div class="video__inner">
-            <button class="video-slider__prev"><img src="img/hero/slider-arrow.svg" alt=""></button>
+            <button class="video-slider__button video-slider__prev">
+              <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21L2 11L12 0.999999" stroke="#111111" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </button>
             <div class="video__wrapper">
               <div class="video__big video-container"><img class="video__item-img" src="img/video/big.jpg" alt="">
                 <div class="video__item-wrap"> 
@@ -208,7 +223,11 @@
                 <button class="video__button"><img src="img/video/play.svg" alt=""></button>
               </div>
             </div>
-            <button class="video-slider__next"><img src="img/hero/slider-arrow.svg" alt=""></button>
+            <button class="video-slider__button video-slider__next">
+              <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L11 11L1 21" stroke="#111111" stroke-width="2" stroke-linecap="round">                       </path>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -287,7 +306,7 @@
             </div>
           </div>
         </div>
-        <div class="container container-slider">    
+        <div class="container other-container">
           <div class="other__inner"> 
             <div class="other__item"> <img class="other__item-img" src="img/other/1.jpg" alt="">
               <div class="other__item-info-wrapper">
@@ -356,10 +375,95 @@
           </div>
         </div>
       </section>
+      <section class="systems">
+        <div class="container"> 
+          <h2 class="systems__title title">ИНЖЕНЕРНЫЕ СИСТЕМЫ</h2>
+          <div class="systems-wrapper">
+            <div class="systems-item">
+              <div class="systems-item__container systems-video"><img class="systems-video__item-img" src="img/systems/systems-1.jpg" alt="">
+                <div class="systems-video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="systems-video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="systems-item__info"><span class="systems-item__title">Сантехника</span></div>
+            </div>
+            <div class="systems-item">
+              <div class="systems-item__container systems-video"><img class="systems-video__item-img" src="img/systems/systems-2.jpg" alt="">
+                <div class="systems-video__item-video" data-embed="G1DsbIwXOb0"></div>
+                <button class="systems-video__button"><img src="img/video/play.svg" alt=""></button>
+              </div>
+              <div class="systems-item__info"><span class="systems-item__title">Электрика        </span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="container">
+          <h2 class="partners__title title">НАШИ ПАРТНЕРЫ</h2>
+          <select class="partners-select">
+            <option value="1">Входные двери</option>
+            <option value="2">Межкомнатные двери</option>
+            <option value="3">Кондиционеры</option>
+            <option value="4">Кухни и встроенная мебель</option>
+            <option value="5">Плитка</option>
+            <option value="6">Ламинат и инжереная доска</option>
+            <option value="7">Чистовая сантехника</option>
+            <option value="8">Натяжные потолки</option>
+            <option value="9">Магазин стройматериал</option>
+          </select>
+          <div class="partners-wrapper">
+            <div class="partners-item" data-category="1"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="1"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="1"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="1"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="1"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="1"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="1"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="1"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="2"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="2"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="2"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="2"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="2"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="2"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="2"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="2"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="3"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="3"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="3"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="3"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="3"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="3"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="3"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="3"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="4"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="4"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="4"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="4"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="4"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="4"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="4"><img src="img/partners/partner.svg" alt="Партнер"></div>
+            <div class="partners-item" data-category="4"><img src="img/partners/partner.svg" alt="Партнер"></div>
+          </div>
+        </div>
+        <div class="container partners-container">
+          <div class="partners-tabs swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide partners-tabs__item js-partners-tab active" data-category="1"><span class="partners-tabs__text">Входные двери</span></div>
+              <div class="swiper-slide partners-tabs__item js-partners-tab" data-category="2"><span class="partners-tabs__text">Межкомнатные двери</span></div>
+              <div class="swiper-slide partners-tabs__item js-partners-tab" data-category="3"><span class="partners-tabs__text">Кондиционеры</span></div>
+              <div class="swiper-slide partners-tabs__item js-partners-tab" data-category="4"><span class="partners-tabs__text">Кухни и встроенная мебель</span></div>
+              <div class="swiper-slide partners-tabs__item js-partners-tab" data-category="5"><span class="partners-tabs__text">Плитка</span></div>
+              <div class="swiper-slide partners-tabs__item js-partners-tab" data-category="6"><span class="partners-tabs__text">Ламинат и инжереная доска</span></div>
+              <div class="swiper-slide partners-tabs__item js-partners-tab" data-category="7"><span class="partners-tabs__text">Чистовая сантехника</span></div>
+              <div class="swiper-slide partners-tabs__item js-partners-tab" data-category="8"><span class="partners-tabs__text">Натяжные потолки</span></div>
+              <div class="swiper-slide partners-tabs__item js-partners-tab" data-category="9"><span class="partners-tabs__text">Магазин стройматериал</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="info">
         <div class="container"> 
           <div class="info__inner"> 
-            <div class="info__map" id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11203.477324796913!2d37.64232587767989!3d55.73693859780042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ0JzE5LjQiTiAzN8KwMzknMDQuMSJF!5e0!3m2!1sru!2s!4v1620927871049!5m2!1sru!2s" style="border:0; width=100%; height=100%; " allowfullscreen="" loading="lazy"></iframe>    </div>
             <div class="info__data">
               <div class="info__contacts-info info-info"> 
                 <h2 class="info-info__title">Контактная информация</h2>
@@ -408,7 +512,12 @@
         <div class="order-popup__overlay"> 
           <div class="order-popup__dialog"> 
             <h3 class="title order-popup__title">Оформление заказа</h3>
-            <button class="order-popup__close"><img src="img/close.svg" alt="X"></button>
+            <button class="order-popup__close">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8761 11.7884L19.0878 20L10.8761 28.2116C10.6243 28.4636 10.6243 28.872 10.8761 29.1239C11.1281 29.3758 11.5365 29.3758 11.7884 29.1239L20 20.9123L28.2116 29.1239C28.4679 29.3715 28.8763 29.3644 29.1239 29.1081C29.3654 28.8581 29.3654 28.4616 29.1239 28.2116L20.9123 20L29.1239 11.7884C29.3802 11.5409 29.3873 11.1325 29.1397 10.8762C28.8921 10.6199 28.4837 10.6128 28.2274 10.8604C28.222 10.8655 28.2168 10.8708 28.2116 10.8762L20 19.0878L11.7884 10.8762C11.5409 10.6199 11.1324 10.6128 10.8761 10.8603C10.6198 11.1078 10.6127 11.5162 10.8602 11.7725C10.8655 11.7779 10.8707 11.7833 10.8761 11.7884Z" fill="black"></path>
+                <path d="M39.3548 0H0.645161C0.288871 0 0 0.288871 0 0.645161V39.3548C0 39.7111 0.288871 40 0.645161 40H39.3548C39.7111 40 40 39.7111 40 39.3548V0.645161C40 0.288871 39.7111 0 39.3548 0ZM38.7097 38.7097H1.29032V1.29032H38.7097V38.7097Z" fill="black"></path>
+              </svg>
+            </button>
             <form class="order-popup-form order-popup__contacts-form__form js-form-order-popup">
               <div class="order-popup-form__wrap">
                 <input class="order-popup-form__name iscomplete" placeholder="Ваше имя" type="text" data-validate-field="name">

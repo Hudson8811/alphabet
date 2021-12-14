@@ -69,8 +69,8 @@
   line-height: 17px;
 
   @include mobile {
-    height: 70px;
-    padding: 13px 0;
+    // height: 70px;
+    padding: 25px 0;
     display: flex;
     align-items: center;
   }
@@ -107,7 +107,7 @@
     }
 
     @include mobile {
-      width: 100px;
+      width: 160px;
     }
   }
 
@@ -232,8 +232,6 @@
       }
 
       &:hover {
-        color: $secondary;
-
         &::before {
           width: 90%;
         }
@@ -282,12 +280,12 @@
         }
       }
 
-      &:last-child {
-        &:hover {
-          color: $primary;
-          text-decoration: underline;
-        }
-      }
+      // &:last-child {
+      //   &:hover {
+      //     color: $primary;
+      //     text-decoration: underline;
+      //   }
+      // }
     }
 
     &-title {
@@ -297,6 +295,15 @@
 
     &-text {
       font-weight: 700;
+    }
+  }
+
+  &-link {
+    @media screen and (min-width: 1080px) {
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
     }
   }
 }

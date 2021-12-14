@@ -122,7 +122,7 @@
       line-height: 17px;
       color: #1c1c1c;
       > a {
-        color: $secondary;
+        color: #525251;
       }
 
       @include mobile {
@@ -143,6 +143,7 @@
 
   &__logo {
     width: 245px;
+    margin-bottom: 8px;
     &-link {
       flex-shrink: 0;
       // margin-right: 55px;

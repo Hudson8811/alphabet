@@ -13,6 +13,13 @@
     padding-bottom: 60px;
   }
 
+  &-container {
+    @media screen and (width: 1920px) {
+      width: 1660px;
+      margin-right: 0;
+    }
+  }
+
   &__heading {
     display: flex;
     align-items: center;
@@ -25,9 +32,42 @@
     border: 1px solid $black;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s linear;
 
     &:first-child {
       margin-right: 10px;
+
+      @include mobile {
+        margin-right: 3px;
+      }
+    }
+
+    svg {
+      path {
+        transition: 0.3s linear;
+      }
+    }
+
+    @media screen and (min-width: 1080px) {
+      &:hover {
+        border-color: #c4c4c4;
+
+        svg {
+          path {
+            stroke: #525251;
+          }
+        }
+      }
+    }
+
+    @include mobile {
+      width: 36px;
+      height: 36px;
+
+      svg {
+        width: 6.5px;
+        height: 11px;
+      }
     }
   }
 
@@ -114,9 +154,9 @@
       height: 467px;
 
       @media (max-width: 1200px) {
-        width: 401px;
+        width: 350px;
         object-fit: cover;
-        height: 339px;
+        height: 250px;
         margin-right: 30px;
       }
 
@@ -135,7 +175,7 @@
       font-weight: 300;
       font-size: 25px;
       line-height: 28px;
-      display: block;
+      display: none;
 
       @include media-1400 {
         font-size: 20px;
@@ -146,6 +186,10 @@
         font-size: 18px;
         line-height: 21px;
         padding: 17px 0;
+      }
+
+      &--tablet {
+        display: block;
       }
 
       //   &--tablet {

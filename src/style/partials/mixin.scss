@@ -60,3 +60,7 @@
     @content;
   }
 }
+
+@function vw($px) {
+  @return ($px / 320 * 100) + vw;
+}

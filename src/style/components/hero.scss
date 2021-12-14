@@ -92,7 +92,8 @@
 
     @include tablet {
       padding: 55px 40px;
-      width: 403px;
+      width: 503px;
+      margin-right: -100px;
     }
 
     @include mobile {
@@ -231,7 +232,7 @@
       }
 
       > a {
-        color: $primary;
+        color: $black;
         &:hover {
           text-decoration: underline;
         }

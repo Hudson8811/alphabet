@@ -7,11 +7,11 @@
 //= libs/just-validate.min.js
 //= libs/masonry.min.js
 //= libs/mask.js
-
-
+//= libs/swiper-bundle.min.js
 
 /* my scripts */
 
 //= partials/components.js
 //= partials/header.js
 //= partials/main.js
+//= partials/partners.js

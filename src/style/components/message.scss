@@ -1,0 +1,100 @@
+.message {
+  padding: 120px 0;
+
+  @include tablet {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &-video {
+    position: relative;
+    width: 100%;
+    height: 718px;
+
+    @include tablet {
+      height: 423px;
+    }
+
+    @media screen and (max-width: 800px) {
+      height: 300px;
+    }
+
+    @include mobile {
+      height: vw(164);
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      object-fit: cover;
+    }
+
+    &__button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      background-color: $black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      @media (min-width: 1000px) {
+        &:hover {
+          background-color: $darkGrey;
+        }
+      }
+
+      img {
+        position: static;
+        width: 17px;
+        height: 20px;
+      }
+    }
+
+    &__item {
+      &-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+
+        > iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+}

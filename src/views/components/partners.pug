@@ -1,0 +1,23 @@
+- const categories = ['Входные двери', 'Межкомнатные двери', 'Кондиционеры', 'Кухни и встроенная мебель', 'Плитка', 'Ламинат и инжереная доска', 'Чистовая сантехника', 'Натяжные потолки', 'Магазин стройматериал'];
+
+.container
+  h2.partners__title.title НАШИ ПАРТНЕРЫ
+
+  select.partners-select
+    each item, index in categories
+      option(value= index + 1)= item 
+
+  .partners-wrapper
+    - var partner = 1;
+    while partner <= 32
+      .partners-item(data-category=(partner<=8)?'1':(partner<=16)?'2':(partner<=24)?'3':'4')
+        img(src="img/partners/partner.svg", alt="Партнер")
+      - partner++;
+
+.container.partners-container
+  .partners-tabs.swiper
+    .swiper-wrapper
+      each item, index in categories
+        .swiper-slide.partners-tabs__item.js-partners-tab(data-category= index + 1 class=index===0?'active':'')
+          span.partners-tabs__text= item
+      

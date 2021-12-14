@@ -36,10 +36,6 @@
       @media (max-width: 1300px) {
         margin-right: 0;
       }
-
-      @include mobile {
-        margin-top: 50px;
-      }
     }
 
     &-form {
@@ -160,7 +156,7 @@
       font-size: 16px;
       line-height: 150%;
       color: #1c1c1c;
-      padding: 12px0;
+      padding: 12px 0;
       height: 110px;
       border: 1px solid #fff;
 
@@ -168,6 +164,10 @@
         font-size: 14px;
         line-height: 150%;
         height: 80px;
+      }
+
+      &::placeholder {
+        color: $black;
       }
     }
     &__wrap {
@@ -199,7 +199,7 @@
       line-height: 19px;
 
       > a {
-        color: #37a58c;
+        color: $black;
         &:hover {
           text-decoration: underline;
         }
@@ -488,6 +488,10 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  input[type="checkbox"]:checked + label:after {
+    top: 12px;
   }
 }
 input {

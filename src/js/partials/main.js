@@ -22,7 +22,7 @@ $(document).ready(function () {
     dots: false,
     adaptiveHeight: true,
     infinite: false,
-    slidesToShow: 3,
+    slidesToShow: 3.5,
     slidesToScroll: 1,
     prevArrow: ".other__prev",
     nextArrow: ".other__next",
@@ -484,4 +484,94 @@ $(document).ready(function () {
       "linear"
     );
   });
+
+  if ($(".message-video").length) {
+    const videoWrapper = document.querySelector(".message-video");
+    const videos = $(".message-video__item-video iframe");
+    const videoImg = $(".message-video__item-img");
+    const videoBtn = $(".message-video__button");
+
+    $(videoBtn).each(function (idx, item) {
+      $(item).on("click", () => {
+        const src = $(videos).eq(idx).attr("src");
+        $(videoBtn).eq(idx).css("display", "none");
+        $(videoImg).eq(idx).css("display", "none");
+      });
+    });
+    //
+    videoWrapper.addEventListener("click", (event) => {
+      let target = event.target;
+
+      target = target.closest(".message-video");
+
+      if (target) {
+        const videoBtn = target.querySelector(".message-video__button");
+        target = target.querySelector(".message-video__item-video");
+        if (videoBtn) {
+          videoStart(target);
+        }
+      }
+    });
+    //
+    function videoStart(target) {
+      var youtube = document.querySelectorAll(".message-video__item-video");
+
+      var iframe = document.createElement("iframe");
+
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute(
+        "src",
+        "https://www.youtube.com/embed/" + target.dataset.embed + "?rel=0&showinfo=0&autoplay=1"
+      );
+
+      target.innerHTML = "";
+      target.appendChild(iframe);
+    }
+  }
+
+  if ($(".systems-video").length) {
+    const videoWrapper = document.querySelector(".systems-wrapper");
+    const videos = $(".systems-video__item-video iframe");
+    const videoImg = $(".systems-video__item-img");
+    const videoBtn = $(".systems-video__button");
+
+    $(videoBtn).each(function (idx, item) {
+      $(item).on("click", () => {
+        const src = $(videos).eq(idx).attr("src");
+        $(videoBtn).eq(idx).css("display", "none");
+        $(videoImg).eq(idx).css("display", "none");
+      });
+    });
+    //
+    videoWrapper.addEventListener("click", (event) => {
+      let target = event.target;
+
+      target = target.closest(".systems-video");
+
+      if (target) {
+        const videoBtn = target.querySelector(".systems-video__button");
+        target = target.querySelector(".systems-video__item-video");
+        if (videoBtn) {
+          videoStart(target);
+        }
+      }
+    });
+    //
+    function videoStart(target) {
+      var youtube = document.querySelectorAll(".systems-video__item-video");
+
+      var iframe = document.createElement("iframe");
+
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute(
+        "src",
+        "https://www.youtube.com/embed/" + target.dataset.embed + "?rel=0&showinfo=0&autoplay=1"
+      );
+
+      target.innerHTML = "";
+      target.appendChild(iframe);
+    }
+  }
 });

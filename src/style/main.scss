@@ -1,17 +1,16 @@
 @import "partials/reset.css";
-@import "partials/fonts.scss";
+// @import "partials/fonts.scss";
 @import "partials/jquery.fancybox.min.css";
 @import "partials/slick.css";
+@import "libs/swiper-bundle.min.scss";
 @import "libs/just-validate";
-@import "partials/dd"; 
-
-
+@import "partials/dd";
 
 /* my style */
 @import "partials/mixin";
-@import "partials/_var"; 
-@import "partials/chexbox"; 
-@import "partials/button"; 
+@import "partials/_var";
+@import "partials/chexbox";
+@import "partials/button";
 @import "partials/components";
 @import "partials/header";
 @import "partials/main";
@@ -21,12 +20,11 @@
 @import "components/advantage.scss";
 @import "components/works.scss";
 @import "components/video.scss";
+@import "components/message.scss";
 @import "components/price.scss";
 @import "components/other.scss";
 @import "components/info.scss";
+@import "components/systems.scss";
+@import "components/partners.scss";
 @import "components/custom.scss";
 @import "components/order-popup.scss";
-
-
-
-
