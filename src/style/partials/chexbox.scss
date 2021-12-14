@@ -67,8 +67,8 @@ input[type="checkbox"]:not(:checked) + label:after {
   width: 10px;
   height: 6px;
   border-radius: 1px;
-  border-left: 2px solid #dd0060;
-  border-bottom: 2px solid #dd0060;
+  border-left: 2px solid $black;
+  border-bottom: 2px solid $black;
   transform: rotate(-45deg);
 }
 

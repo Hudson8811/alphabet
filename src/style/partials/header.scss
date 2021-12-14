@@ -6,7 +6,7 @@
     height: 26px;
     cursor: pointer;
     transition-duration: 0.2s;
-    @include media-1720 {
+    @media (max-width: 1439px) {
       display: flex;
     }
     span,
@@ -61,8 +61,8 @@
   left: 0;
   right: 0;
   z-index: 101;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   // height: 140px;
   background-color: #ffffff;
   font-size: 15px;
@@ -70,7 +70,7 @@
 
   @include mobile {
     // height: 70px;
-    padding: 25px 0;
+    // padding: 25px 0;
     display: flex;
     align-items: center;
   }
@@ -104,6 +104,14 @@
       display: inline-block;
       flex-shrink: 0;
       margin-right: 93px;
+
+      @include media-1720 {
+        margin-right: 20px;
+      }
+    }
+
+    @include media-1720 {
+      width: 160px;
     }
 
     @include mobile {
@@ -117,7 +125,7 @@
     justify-content: space-between;
     width: 100%;
 
-    @media (max-width: 1720px) {
+    @media (max-width: 1439px) {
       justify-content: center;
     }
 
@@ -164,7 +172,10 @@
   }
 
   &-nav {
-    @media (max-width: 1720px) {
+    @include media-1720 {
+      margin: 0 auto;
+    }
+    @media (max-width: 1439px) {
       position: fixed;
       top: 106px;
       right: -110%;
@@ -202,7 +213,7 @@
       display: flex;
       align-items: center;
 
-      @media (max-width: 1720px) {
+      @media (max-width: 1439px) {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -214,7 +225,7 @@
       position: relative;
       transition: 0.4s;
 
-      @media (max-width: 1720px) {
+      @media (max-width: 1439px) {
         &:not(:last-child) {
           margin-bottom: 26px;
         }
@@ -239,6 +250,10 @@
 
       &:not(:last-child) {
         margin-right: 30px;
+
+        @include media-1720 {
+          margin-right: 15px;
+        }
       }
 
       a {
@@ -273,6 +288,12 @@
 
       &:not(:last-child) {
         margin-right: 30px;
+
+        @include media-1720 {
+          // margin-left: auto;
+          width: 240px;
+          margin-right: 15px;
+        }
 
         @include tablet {
           margin-right: 0;
